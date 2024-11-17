@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Profesor"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-11-16 07:13:42 po podne"/>
+        <attribute name="created" value="UHJvZmVzb3I7IFBST0ZFU09SOyAyMDI0LTExLTE2OyAxMjoxNjoyOSBQTTsgMjg1MA=="/>
+        <attribute name="edited" value="UHJvZmVzb3I7IFBST0ZFU09SOyAyMDI0LTExLTE2OyAxMjozMzozMCBQTTsgMjg0MQ=="/>
+        <attribute name="edited" value="QmluZ287RFVTQU4zOzIwMjQtMTEtMTY7MDc6MTM6NDIgcG8gcG9kbmU7MTsyOTQz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="L" type="Integer" array="False" size=""/>
+            <declare name="N" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="A" type="Integer" array="True" size="5"/>
+            <input variable="N"/>
+            <input variable="L"/>
+            <for variable="i" start="1" end="N" direction="inc" step="1">
+                <input variable="A[i]"/>
+            </for>
+            <declare name="ID" type="Integer" array="False" size=""/>
+            <assign variable="ID" expression="-1"/>
+            <for variable="i" start="1" end="N" direction="inc" step="1">
+                <breakpoint/>
+                <if expression="L &gt;= A[i]">
+                    <then>
+                        <if expression="ID &lt; 0">
+                            <then>
+                                <assign variable="ID" expression="i"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="ID" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

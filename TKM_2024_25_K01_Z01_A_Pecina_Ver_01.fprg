@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Profesor"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-11-16 08:36:03 po podne"/>
+        <attribute name="created" value="UHJvZmVzb3I7IFBST0ZFU09SOyAyMDI0LTExLTE2OyAxMjoxNjoyOSBQTTsgMjg1MA=="/>
+        <attribute name="edited" value="UHJvZmVzb3I7IFBST0ZFU09SOyAyMDI0LTExLTE2OyAxMjozMzozMCBQTTsgMjg0MQ=="/>
+        <attribute name="edited" value="QmluZ287RFVTQU4zOzIwMjQtMTEtMTY7MDg6MzY6MDMgcG8gcG9kbmU7ODsyOTUz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="L" type="Integer" array="False" size=""/>
+            <declare name="N" type="Integer" array="False" size=""/>
+            <declare name="h" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="ID" type="Integer" array="False" size=""/>
+            <input variable="N"/>
+            <input variable="L"/>
+            <assign variable="ID" expression="-1"/>
+            <assign variable="i" expression="0"/>
+            <while expression="i &lt; N &amp;&amp; ID &lt; 0">
+                <assign variable="i" expression="i + 1"/>
+                <input variable="h"/>
+                <if expression="h &lt;= L">
+                    <then>
+                        <assign variable="ID" expression="i"/>
+                    </then>
+                    <else/>
+                </if>
+            </while>
+            <output expression="ID" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
